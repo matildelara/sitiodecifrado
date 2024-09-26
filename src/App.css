@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Cambiar la fuente a Poppins */
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  text-align: center; /* Centrar el contenido */
+  border: 2px solid #ddd; /* Bordes más gruesos para remarcar */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Agregar separación visual entre el fondo del body y el formulario */
+.form-wrapper {
+  background-color: #ffffff;
+  border: 2px solid #5e4b8b; /* Bordes más notorios en los formularios */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  max-width: 600px; /* Ajustar ancho para que el formulario no sea muy grande */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  background-color: #5e4b8b;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
   color: white;
+  text-decoration: none;
+  font-weight: 600; /* Letra semibold */
+  padding: 15px 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:hover {
+  background-color: #4b3e72;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos específicos para las secciones de información */
+h2 {
+  font-weight: 700; /* Negrita para los títulos */
+}
+
+p, ol, ul, li {
+  font-weight: 400; /* Texto regular */
+  line-height: 1.6; /* Mejorar la legibilidad */
+}
+
+input, textarea {
+  display: block;
+  width: 70%; /* Reducir ancho de los inputs */
+  margin: 10px auto; /* Centrarlos */
+  border: 2px solid #5e4b8b; /* Borde más notorio */
+  border-radius: 5px;
+  padding: 12px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* Fondo ligeramente gris para diferenciar del fondo blanco */
+}
+
+button {
+  margin-right: 10px;
+  background-color: #5e4b8b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4b3e72;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.col {
+  flex: 1;
+  padding: 30px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%; /* Asegura que la tabla ocupe todo el ancho */
+  border-collapse: collapse; /* Elimina el espacio entre celdas */
+  margin: 20px 0; /* Añade margen vertical alrededor de la tabla */
+}
+
+th, td {
+  border: 1px solid #5e4b8b; /* Cambia el color del borde a tu paleta */
+  padding: 10px; /* Espaciado interno */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+th {
+  background-color: #5e4b8b; /* Fondo de la cabecera de la tabla */
+  color: white; /* Color de texto en la cabecera */
+  font-weight: 600; /* Fuente semibold para la cabecera */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+}
+
+tbody tr:hover {
+  background-color: #e1e1e1; /* Color al pasar el ratón sobre la fila */
+}
+
+/* Ajustes adicionales */
+button {
+  display: inline-block;
+  margin: 10px 5px; /* Espaciado entre botones */
+  background-color: #5e4b8b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+textarea {
+  height: 80px; /* Ajustar la altura del textarea */
+}
+.alert {
+  background-color: #f8d7da; /* Color de fondo de advertencia */
+  color: #721c24; /* Color del texto de advertencia */
+  border: 1px solid #f5c6cb; /* Borde de advertencia */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 20px 0; /* Margen vertical */
+}
+.aligned-list {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0; /* Quitar margen de la lista */
+  margin: 0; /* Quitar margen de la lista */
+}
+
+.aligned-list li {
+  margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.aligned-list li strong {
+  display: inline-block; /* Hacer que el texto fuerte se comporte como un bloque */
+  width: 120px; /* Ajustar el ancho según sea necesario */
+}
+.aligned-list {
+  list-style-type: none; /* Quitar viñetas */
+  padding: 0; /* Quitar margen de la lista */
+  margin: 0; /* Quitar margen de la lista */
+}
+
+.aligned-list li {
+  margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.aligned-list li strong {
+  display: inline-block; /* Hacer que el texto fuerte se comporte como un bloque */
+  width: 120px; /* Ajustar el ancho según sea necesario */
 }
