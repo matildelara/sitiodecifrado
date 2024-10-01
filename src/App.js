@@ -11,6 +11,7 @@ function App() {
             <Link to="/">Inicio</Link>
             <Link to="/cesar">Cifrado César</Link>
             <Link to="/escitala">Cifrado Escítala</Link>
+            <Link to="/escitala">hass</Link>
           </nav>
 
           {/* Rutas */}
